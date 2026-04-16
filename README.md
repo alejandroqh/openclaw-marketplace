@@ -20,8 +20,8 @@
 
 Launch the interactive installer to pick tools and targets:
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/alejandroqh/openclaw-marketplace/main/h39.sh | bash
+```sh
+curl -fsSL https://raw.githubusercontent.com/alejandroqh/openclaw-marketplace/main/h39.sh | sh
 ```
 
 Binaries are installed to `~/.local/bin` (override with `H39_INSTALL_DIR`).
