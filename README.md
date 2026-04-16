@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Marketplace-blue?style=for-the-badge" alt="Marketplace" />
   <br/>
-  <strong>Personal collection of OpenClaw plugins for AI agents</strong>
+  <strong>Personal Collection of Harness plugins for AI agents</strong>
   <br/>
   <sub>Browser automation &bull; Terminal emulation &bull; Memory &bull; Repo exploration &bull; Privilege elevation</sub>
 </p>
