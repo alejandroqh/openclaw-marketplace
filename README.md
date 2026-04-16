@@ -16,7 +16,19 @@
 
 ---
 
-## Installation
+## Quick Install (MCP Servers)
+
+Launch the interactive installer to pick tools and targets:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/alejandroqh/openclaw-marketplace/main/h39.sh | bash
+```
+
+Binaries are installed to `~/.local/bin` (override with `H39_INSTALL_DIR`).
+
+---
+
+## Installation (OpenClaw Plugins)
 
 Point OpenClaw at this marketplace and install any plugin in one command:
 
@@ -209,6 +221,7 @@ cd browser39 && npm install
 
 ```
 openclaw-marketplace/
+├── h39.sh                        # MCP server installer (curl | bash)
 ├── .claude-plugin/
 │   └── marketplace.json          # Plugin index
 ├── browser39/                    # Headless browser
