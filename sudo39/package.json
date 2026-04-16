@@ -1,6 +1,6 @@
 {
   "name": "sudo39",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenClaw native plugin for sudo39 - guarded privilege-elevation MCP server for AI agents",
   "type": "module",
   "openclaw": {

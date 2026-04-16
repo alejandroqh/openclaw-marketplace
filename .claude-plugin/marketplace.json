@@ -14,7 +14,7 @@
       "description": "Headless web browser for AI agents. Fetches pages as token-optimized markdown with JS support, forms, cookies, storage, and web search.",
       "author": { "name": "Alejandro Quintanar" },
       "repository": "https://github.com/alejandroqh/browser39",
-      "license": "MIT",
+      "license": "Apache-2.0",
       "keywords": ["browser", "headless", "markdown", "ai-agent", "web", "scraping"],
       "category": "tools",
       "tags": ["browser", "headless", "web-search", "dom", "cookies", "forms"]
@@ -36,7 +36,7 @@
       "description": "Guarded privilege-elevation MCP server for AI agents. Run commands via sudo, pkexec, macOS admin prompt, or Windows UAC, gated by an allowlist policy.",
       "author": { "name": "Alejandro Quintanar" },
       "repository": "https://github.com/alejandroqh/sudo39",
-      "license": "MIT",
+      "license": "Apache-2.0",
       "keywords": ["sudo", "elevation", "privilege", "security", "ai-agent"],
       "category": "tools",
       "tags": ["sudo", "privilege-elevation", "security", "allowlist", "policy"]

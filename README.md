@@ -1,17 +1,17 @@
 <p align="center">
   <img src="https://img.shields.io/badge/OpenClaw-Marketplace-blue?style=for-the-badge" alt="OpenClaw Marketplace" />
   <br/>
-  <strong>Peronsal collection of OpenClaw plugins for AI agents</strong>
+  <strong>Personal collection of OpenClaw plugins for AI agents</strong>
   <br/>
-  <sub>Browser automation &bull; Terminal emulation &bull; Privilege elevation</sub>
+  <sub>Browser automation &bull; Terminal emulation &bull; Memory &bull; Repo exploration &bull; Privilege elevation</sub>
 </p>
 
 <p align="center">
   <a href="#installation"><img src="https://img.shields.io/badge/-Install-green?style=flat-square" alt="Install" /></a>
   <a href="#plugins"><img src="https://img.shields.io/badge/-Plugins-purple?style=flat-square" alt="Plugins" /></a>
   <a href="https://github.com/alejandroqh"><img src="https://img.shields.io/badge/-Author-orange?style=flat-square" alt="Author" /></a>
-  <img src="https://img.shields.io/badge/plugins-3-blue?style=flat-square" alt="3 plugins" />
-  <img src="https://img.shields.io/badge/license-MIT%20%2F%20Apache--2.0-lightgrey?style=flat-square" alt="License" />
+  <img src="https://img.shields.io/badge/plugins-5-blue?style=flat-square" alt="5 plugins" />
+  <img src="https://img.shields.io/badge/license-Apache--2.0-lightgrey?style=flat-square" alt="License" />
 </p>
 
 ---
@@ -53,8 +53,8 @@ cd browser39 && npm install
 
 | | |
 |---|---|
-| **Version** | `1.6.0` |
-| **License** | MIT |
+| **Version** | `1.6.2` |
+| **License** | Apache-2.0 |
 | **Repo** | [alejandroqh/browser39](https://github.com/alejandroqh/browser39) |
 
 <details>
@@ -86,18 +86,46 @@ cd browser39 && npm install
 
 ---
 
+### memory39
+
+> Temporal-priority memory system for AI agents. Store and recall events, facts, people, and places with intelligent scoring (relevance + importance + recency).
+
+| | |
+|---|---|
+| **Version** | `1.0.1` |
+| **License** | Apache-2.0 |
+| **Repo** | [alejandroqh/memory39](https://github.com/alejandroqh/memory39) |
+
+<details>
+<summary><strong>8 tools</strong> &mdash; click to expand</summary>
+
+| Tool | Description |
+|------|-------------|
+| `recall` | Search memories with temporal-priority scoring |
+| `event` | Store a dated or undated event |
+| `thing` | Store a fact, concept, or object |
+| `person` | Store a social memory about someone |
+| `place` | Store a spatial/location memory |
+| `forget` | Delete a memory by universal ID |
+| `alter` | Modify fields of an existing memory |
+| `connect` | Find 2-3 hop connections between concepts |
+
+</details>
+
+---
+
 ### npcterm
 
 > Headless, in-memory terminal emulator for AI agents. Full ANSI/VT100 emulation with PTY spawning.
 
 | | |
 |---|---|
-| **Version** | `1.3.0` |
+| **Version** | `1.3.1` |
 | **License** | Apache-2.0 |
 | **Repo** | [alejandroqh/npcterm](https://github.com/alejandroqh/npcterm) |
 
 <details>
-<summary><strong>15 tools</strong> &mdash; click to expand</summary>
+<summary><strong>17 tools</strong> &mdash; click to expand</summary>
 
 | Tool | Description |
 |------|-------------|
@@ -123,14 +151,42 @@ cd browser39 && npm install
 
 ---
 
+### repo39
+
+> Token-optimized repository explorer for AI agents. Directory trees, symbol maps, dependency parsing, git diffs, and content search.
+
+| | |
+|---|---|
+| **Version** | `1.0.1` |
+| **License** | Apache-2.0 |
+| **Repo** | [alejandroqh/repo39](https://github.com/alejandroqh/repo39) |
+
+<details>
+<summary><strong>8 tools</strong> &mdash; click to expand</summary>
+
+| Tool | Description |
+|------|-------------|
+| `repo39_tree` | Directory tree listing |
+| `repo39_identify` | Detect project type with confidence scores |
+| `repo39_map` | Extract code symbols with line numbers |
+| `repo39_deps` | List dependencies from manifest files |
+| `repo39_changes` | Compact git log or branch diff |
+| `repo39_search` | Token-compact content search |
+| `repo39_review` | Symbol-level diff between git refs |
+| `repo39_summary` | One-shot repo orientation |
+
+</details>
+
+---
+
 ### sudo39
 
 > Guarded privilege-elevation MCP server for AI agents. Run commands via sudo, pkexec, macOS admin prompt, or Windows UAC, gated by an allowlist policy.
 
 | | |
 |---|---|
-| **Version** | `1.0.0` |
-| **License** | MIT |
+| **Version** | `1.0.1` |
+| **License** | Apache-2.0 |
 | **Repo** | [alejandroqh/sudo39](https://github.com/alejandroqh/sudo39) |
 
 <details>
@@ -159,7 +215,15 @@ openclaw-marketplace/
 │   ├── openclaw.plugin.json
 │   ├── package.json
 │   └── index.ts
+├── memory39/                     # Agent memory
+│   ├── openclaw.plugin.json
+│   ├── package.json
+│   └── index.ts
 ├── npcterm/                      # Terminal emulator
+│   ├── openclaw.plugin.json
+│   ├── package.json
+│   └── index.ts
+├── repo39/                       # Repo explorer
 │   ├── openclaw.plugin.json
 │   ├── package.json
 │   └── index.ts
