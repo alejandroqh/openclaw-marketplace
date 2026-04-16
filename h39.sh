@@ -806,7 +806,7 @@ cmd_menu() {
         echo ""
         printf '  %s [1-%d]: ' "$prompt_msg" "${#SERVERS[@]}"
         local choice
-        read -r choice
+        read -r choice <&3
         case "$choice" in
             [1-5]) PICKED_SERVER="${SERVERS[$((choice-1))]}"; return 0 ;;
             *)     warn "Invalid choice"; return 1 ;;
@@ -825,7 +825,7 @@ cmd_menu() {
         echo ""
         printf '  Target [1-%d, default=%d]: ' "$all_num" "$all_num"
         local choice
-        read -r choice
+        read -r choice <&3
         choice="${choice:-$all_num}"
 
         if [ "$choice" = "$all_num" ]; then
@@ -848,11 +848,12 @@ cmd_menu() {
     menu_pause() {
         echo ""
         printf '  \033[38;5;240mPress Enter to continue...\033[0m'
-        read -r
+        read -r <&3
     }
 
-    # ── Reopen stdin from terminal (needed for curl | bash) ──
-    exec < /dev/tty || die "No terminal available for interactive menu"
+    # ── Open TTY for interactive reads (needed for curl | bash) ──
+    exec 3< /dev/tty || die "No terminal available for interactive menu"
+    trap 'exec 3<&-' RETURN
 
     # ── Main loop ──
     while true; do
@@ -860,7 +861,7 @@ cmd_menu() {
         draw_menu
         printf '  Action: '
         local action
-        read -r action
+        read -r action <&3
 
         case "$action" in
             1)
@@ -875,7 +876,7 @@ cmd_menu() {
                     echo ""
                     printf '  Also remove binary? [y/N]: '
                     local purge_choice
-                    read -r purge_choice
+                    read -r purge_choice <&3
                     case "$purge_choice" in
                         [Yy]) cmd_uninstall "$PICKED_SERVER" --target "$PICKED_TARGET" --purge ;;
                         *)    cmd_uninstall "$PICKED_SERVER" --target "$PICKED_TARGET" ;;
@@ -907,7 +908,7 @@ cmd_menu() {
                     echo ""
                     printf '  Also remove binaries? [y/N]: '
                     local purge_all
-                    read -r purge_all
+                    read -r purge_all <&3
                     case "$purge_all" in
                         [Yy]) cmd_uninstall all --target "$PICKED_TARGET" --purge ;;
                         *)    cmd_uninstall all --target "$PICKED_TARGET" ;;
