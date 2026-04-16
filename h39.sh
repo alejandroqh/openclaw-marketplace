@@ -851,6 +851,9 @@ cmd_menu() {
         read -r
     }
 
+    # ── Reopen stdin from terminal (needed for curl | bash) ──
+    exec < /dev/tty || die "No terminal available for interactive menu"
+
     # ── Main loop ──
     while true; do
         refresh_state
